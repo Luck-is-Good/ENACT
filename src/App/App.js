@@ -11,22 +11,26 @@ import MainPanel from '../views/MainPanel';
 import css from './App.module.less';
 import {Layout, Row, Cell, Column, Item} from '@enact/ui/Layout';
 import IconButton from '@enact/ui/IconButton';
+import {ResolutionDecorator,resolution} from '@enact/ui/resolution';
+
+
 
 const containerStyle = {
 	width: '100%',
-	height: '800px'
-  };
+  	height: '400%'
+}
+
   
-  const knucenter = {
+const knucenter = {
 	lat: 12.935504285297199,
 	lng: 77.60565231958368
-  };
+};
   
-  const icons = {
+const icons = {
 	home: {
 	  url: <Icon>home</Icon>,
 	},
-  };
+};
   
 function MyComponent() {
 	return (
@@ -68,10 +72,7 @@ const App = kind({
 				<Row> 
 					<Cell >
 						<p>Body area</p>
-						<MyComponent/>
-						
-						
-
+						<MyComponent />
 					</Cell>
 					<Cell size="30%">
 						<p>right side</p>
@@ -83,5 +84,12 @@ const App = kind({
 		</div>
 	)
 });
-  
+
+
 export default MoonstoneDecorator(App) 
+
+
+
+
+
+  

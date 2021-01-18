@@ -12,8 +12,8 @@ const MainPanel = kind({
 		<Panel {...props}>
 			
 			<IconButton>home</IconButton>
-			<IconButton>plus</IconButton>
 			<IconButton>gear</IconButton>
+			<IconButton>plus</IconButton>
 			<Button>USER1</Button>
 			<Button>USER2</Button>
 		</Panel>
