@@ -14,7 +14,7 @@ import IconButton from '@enact/ui/IconButton';
 
 const containerStyle = {
 	width: '100%',
-	height: '900px'
+	height: '800px'
   };
   
   const knucenter = {
@@ -61,16 +61,19 @@ const App = kind({
 		<div {...props}>
 			<Panels>
 			<Column>
-				<Cell size={90} component="header">
+				<Cell size="15%" component="header">
 					<MainPanel />
 				</Cell>
-				<Cell shrink>
+				<Cell>
 				<Row> 
 					<Cell >
 						<p>Body area</p>
 						<MyComponent/>
+						
+						
+
 					</Cell>
-					<Cell shrink>
+					<Cell size="30%">
 						<p>right side</p>
 					</Cell>
 				</Row>
