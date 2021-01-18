@@ -7,21 +7,67 @@ import IconButton from '@enact/moonstone/IconButton';
 import BodyText from '@enact/moonstone/BodyText';
 import Popup from '@enact/moonstone/Popup';
 import ContextualPopupDecorator from '@enact/moonstone/ContextualPopupDecorator';
+import InputForm from '../views/InputForm';
 
-const ButtonWithPopup = ContextualPopupDecorator(Button);
 
-
+/*
 const Location = kind({
 	name: 'Location',
+	
+	handleClickNo(event) {
+		//click No -> error 
+		alert('error : wrong location');
+		
+	},
 
 	render: (props) => (
 		<Panel {...props}>
 			<BodyText centered>Your current location</BodyText>
 			<Button>YES</Button>
 			<Button>NO</Button>
+			
 		</Panel>
 	)
 });
+*/
+
+
+
+class Location extends React.Component {
+	constructor(props) {
+	  super(props);
+  
+	  this.state = {showInputForm: false};
+  
+	  //this.handleClickYes = this.handleClickYes.bind(this);
+	  this.handleClickNo = this.handleClickNo.bind(this);
+	}
+	
+	// handler X -> using router
+	//handleClickYes(event) {
+	  //click yes -> InputForm
+	  //this.setState({showInputForm: true});
+	//}
+	
+	 
+	
+	handleClickNo(event) {
+	  //click No -> error 
+	  alert('error : wrong location');
+	  
+	}
+	
+	render() {
+	  return (
+		<Panel >
+		  <BodyText centered>Your current location</BodyText>
+		  <Button>YES</Button>
+			<Button onClick={this.handleClickNo}>NO</Button>
+		</Panel>
+	  );
+	}
+  }
+
 
 
 export default Location;

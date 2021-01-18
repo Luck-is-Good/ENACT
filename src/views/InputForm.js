@@ -8,6 +8,7 @@ import ExpandableInput from '@enact/moonstone/ExpandableInput';
 import Input from '@enact/moonstone/Input';
 import BodyText from '@enact/moonstone/BodyText';
 
+
 const InputForm = kind({
 	name: 'InputForm',
 
@@ -22,6 +23,46 @@ const InputForm = kind({
 		</Panel>
 	)
 });
+
+
+/*
+class InputForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {username: '', age: null, distance: null};
+  
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    
+    handleChange(event) {
+      this.setState({
+        [event.target.name]: event.target.value
+      });
+    }
+  
+    handleSubmit(event) {
+      alert('User Name:' + this.state.username + ', Age:' + this.state.age + ', Distance:' + this.state.distance);
+      event.preventDefault();
+    }
+  
+    render() {
+      return (
+        <Panel>
+        <form>
+        <BodyText>ADD USER INFO</BodyText>
+            <Input placeholder="Name" value={this.state.username} onChange={this.handleChange}/>
+            <Input placeholder="Age" value={this.state.age} onChange={this.handleChange}/>
+            <BodyText>Maximum allowable distance</BodyText>
+            <Input placeholder="KM" value={this.state.distance} onChange={this.handleChange}/>
+            <Button type="submit" onClick={this.handleSubmit}>SAVE</Button>
+        </form>
+        
+        </Panel>
+      );
+    }
+  }
+  */
 
 
 

@@ -11,7 +11,7 @@ const MainPanel = kind({
 	name: 'MainPanel',
 
 	render: (props) => (
-		<Panel {...props}>
+		<Panel {...props} path="main">
 			<IconButton>home</IconButton>
 			<IconButton>gear</IconButton>
 			<IconButton >plus</IconButton>

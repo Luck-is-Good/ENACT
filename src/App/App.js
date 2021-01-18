@@ -16,7 +16,6 @@ import Location from '../views/Location';
 import InputForm from '../views/InputForm';
 
 
-
 const containerStyle = {
 	width: '100%',
   	height: '800px'
@@ -55,6 +54,8 @@ function MyComponent() {
 	 )
 }
 
+
+
 const App = kind({
 	name: 'App',
 
@@ -76,6 +77,9 @@ const App = kind({
 						<MyComponent />
 					</Cell>
 					<Cell size="30%">
+						
+				
+						<Location />
 						
 					</Cell>
 				</Row>
