@@ -77,9 +77,8 @@ const App = kind({
 						<MyComponent />
 					</Cell>
 					<Cell size="30%">
-						
-				
-						<Location />
+						<InputForm/>
+					
 						
 					</Cell>
 				</Row>
@@ -91,7 +90,16 @@ const App = kind({
 });
 
 
+
 export default MoonstoneDecorator(App) 
+
+// Will have the resolution classes and will be updated when the window resizes
+const AppWithResolution = ResolutionDecorator(App);
+// Will have the resolution classes for the screen at the time of render only
+const AppWithStaticResolution = ResolutionDecorator({dynamic: false}, App);
+const AppWithScreenTypes = ResolutionDecorator({screenTypes: [
+	{name: 'hd', pxPerRem: 16, width: 1280, height: 720, aspectRatioName: 'hdtv', base: true}
+]}, App);
 
 
 

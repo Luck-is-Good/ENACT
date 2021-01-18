@@ -22,7 +22,7 @@ const Location = kind({
 
 	render: (props) => (
 		<Panel {...props}>
-			<BodyText centered>Your current location</BodyText>
+			<BodyText>Your current location</BodyText>
 			<Button>YES</Button>
 			<Button>NO</Button>
 			
@@ -60,7 +60,7 @@ class Location extends React.Component {
 	render() {
 	  return (
 		<Panel >
-		  <BodyText centered>Your current location</BodyText>
+		  <BodyText>Your current location</BodyText>
 		  <Button>YES</Button>
 			<Button onClick={this.handleClickNo}>NO</Button>
 		</Panel>

@@ -12,11 +12,13 @@ const MainPanel = kind({
 
 	render: (props) => (
 		<Panel {...props} path="main">
-			<IconButton>home</IconButton>
-			<IconButton>gear</IconButton>
-			<IconButton >plus</IconButton>
-			<Button>USER1</Button>
-			<Button>USER2</Button>
+			<IconButton size="large">home</IconButton>
+			<IconButton size="large">gear</IconButton>
+			<IconButton size="large">plus</IconButton>
+			
+			{/*use repeater*/}
+			<Button size="large">USER1</Button>
+			
 		</Panel>
 	)
 });

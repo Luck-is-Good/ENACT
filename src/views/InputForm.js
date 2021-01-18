@@ -7,6 +7,7 @@ import IconButton from '@enact/moonstone/IconButton';
 import ExpandableInput from '@enact/moonstone/ExpandableInput';
 import Input from '@enact/moonstone/Input';
 import BodyText from '@enact/moonstone/BodyText';
+import Heading from '@enact/moonstone/Heading';
 
 
 const InputForm = kind({
@@ -14,7 +15,7 @@ const InputForm = kind({
 
 	render: (props) => (
 		<Panel {...props}>
-            <BodyText>ADD USER INFO</BodyText>
+            <Heading>ADD USER INFO</Heading>
             <Input placeholder="Name" />
             <Input placeholder="Age" />
             <BodyText>Maximum allowable distance</BodyText>
