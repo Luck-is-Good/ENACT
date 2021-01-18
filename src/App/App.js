@@ -2,7 +2,7 @@
 
 import kind from '@enact/core/kind';
 import MoonstoneDecorator from '@enact/moonstone/MoonstoneDecorator';
-import Panels from '@enact/moonstone/Panels';
+import Panel from '@enact/moonstone/Panels';
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Button from '@enact/moonstone/Button';
@@ -12,12 +12,14 @@ import css from './App.module.less';
 import {Layout, Row, Cell, Column, Item} from '@enact/ui/Layout';
 import IconButton from '@enact/ui/IconButton';
 import {ResolutionDecorator,resolution} from '@enact/ui/resolution';
+import Location from '../views/Location';
+import InputForm from '../views/InputForm';
 
 
 
 const containerStyle = {
 	width: '100%',
-  	height: '400%'
+  	height: '800px'
 }
 
   
@@ -63,7 +65,7 @@ const App = kind({
 
 	render: (props) => (
 		<div {...props}>
-			<Panels>
+			<Panel>
 			<Column>
 				<Cell size="15%" component="header">
 					<MainPanel />
@@ -71,16 +73,15 @@ const App = kind({
 				<Cell>
 				<Row> 
 					<Cell >
-						<p>Body area</p>
 						<MyComponent />
 					</Cell>
 					<Cell size="30%">
-						<p>right side</p>
+						
 					</Cell>
 				</Row>
 				</Cell>
 			</Column>
-			</Panels>
+			</Panel>
 		</div>
 	)
 });
