@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import kind from '@enact/core/kind';
 import MoonstoneDecorator from '@enact/moonstone/MoonstoneDecorator';
 import Panels from '@enact/moonstone/Panels';
@@ -7,10 +9,11 @@ import Button from '@enact/moonstone/Button';
 import Icon from '@enact/moonstone/Icon';
 import MainPanel from '../views/MainPanel';
 import css from './App.module.less';
-
+import {Layout, Row, Cell, Column, Item} from '@enact/ui/Layout';
+import IconButton from '@enact/ui/IconButton';
 
 const containerStyle = {
-	width: '1600px',
+	width: '100%',
 	height: '900px'
   };
   
@@ -25,7 +28,7 @@ const containerStyle = {
 	},
   };
   
-  function MyComponent() {
+function MyComponent() {
 	return (
 		<LoadScript
 		  googleMapsApiKey="AIzaSyBOluu7JbYoawEF0aMk4cgsPk_Fbx5GrGs"
@@ -44,17 +47,38 @@ const containerStyle = {
 		</LoadScript>
 		
 	 )
-   }
-  
-  class App extends React.Component {
-	render() {
-	  return (
-		<div>
-		<MyComponent />		
+}
+
+const App = kind({
+	name: 'App',
+
+	styles: {
+		css,
+		className: 'app'
+	},
+
+	render: (props) => (
+		<div {...props}>
+			<Panels>
+			<Column>
+				<Cell size={90} component="header">
+					<MainPanel />
+				</Cell>
+				<Cell shrink>
+				<Row> 
+					<Cell >
+						<p>Body area</p>
+						<MyComponent/>
+					</Cell>
+					<Cell shrink>
+						<p>right side</p>
+					</Cell>
+				</Row>
+				</Cell>
+			</Column>
+			</Panels>
 		</div>
-	  );
-	}
-	
-  }
+	)
+});
   
-export default React.memo(App) 
+export default MoonstoneDecorator(App) 
