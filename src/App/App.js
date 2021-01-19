@@ -3,13 +3,14 @@
 import kind from '@enact/core/kind';
 import MoonstoneDecorator from '@enact/moonstone/MoonstoneDecorator';
 import Panel from '@enact/moonstone/Panels';
-import React from 'react';
-import MainPanel from '../views/MainPanel';
+import React ,{Component} from 'react';
+import MainPanel from '../components/MainPanel';
 import css from './App.module.less';
 import {Layout, Row, Cell, Column, Item} from '@enact/ui/Layout';
 import {ResolutionDecorator,resolution} from '@enact/ui/resolution';
-import InputForm from '../views/InputForm';
+import InputForm from '../components/InputForm';
 import Map from '../components/Map';
+import { BrowserRouter,Route, Link,Switch } from "react-router-dom";
 
 const App = kind({
 	name: 'App',
@@ -25,6 +26,7 @@ const App = kind({
 			<Column>
 				<Cell size="15%" component="header">
 					<MainPanel />
+					{/*react-router-nested : change right side*/}
 				</Cell>
 				<Cell>
 				<Row> 
@@ -32,9 +34,7 @@ const App = kind({
 						<Map />
 					</Cell>
 					<Cell size="30%">
-						<InputForm/>
-					
-						
+						{/*rigth side */}
 					</Cell>
 				</Row>
 				</Cell>
