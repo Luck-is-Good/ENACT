@@ -35,7 +35,7 @@ function Map() {
 		  <GoogleMap
 			mapContainerStyle={containerStyle}
 			center={Indiacenter}
-			zoom={19}
+			zoom={18}
 		  >
 			{ /* Child components, such as markers, info windows, etc. */ }
 			<Marker

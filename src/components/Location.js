@@ -8,7 +8,7 @@ import BodyText from '@enact/moonstone/BodyText';
 import Popup from '@enact/moonstone/Popup';
 import ContextualPopupDecorator from '@enact/moonstone/ContextualPopupDecorator';
 import InputForm from './InputForm';
-
+import {Link} from 'react-router-dom';
 
 /*
 const Location = kind({
@@ -31,8 +31,6 @@ const Location = kind({
 });
 */
 
-
-
 class Location extends React.Component {
 	constructor(props) {
 	  super(props);
@@ -48,26 +46,21 @@ class Location extends React.Component {
 	  //click yes -> InputForm
 	  //this.setState({showInputForm: true});
 	//}
-	
-	 
-	
+
 	handleClickNo(event) {
 	  //click No -> error 
 	  alert('error : wrong location');
-	  
 	}
 	
 	render() {
 	  return (
 		<Panel >
 		  <BodyText>Your current location</BodyText>
-		  <Button>YES</Button>
+		  <Link to="/add/userinfo"><Button>YES</Button></Link>
 			<Button onClick={this.handleClickNo}>NO</Button>
 		</Panel>
 	  );
 	}
   }
-
-
 
 export default Location;

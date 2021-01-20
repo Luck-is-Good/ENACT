@@ -6,15 +6,16 @@ import React from 'react';
 import IconButton from '@enact/moonstone/IconButton';
 import Routable from '@enact/ui/Routable';
 import {Route} from '@enact/moonstone/Panels';
+import { Link } from "react-router-dom";
 
 const MainPanel = kind({
 	name: 'MainPanel',
 
 	render: (props) => (
 		<Panel {...props}>
-			<IconButton >home</IconButton>
-			<IconButton >gear</IconButton>
-			<IconButton >plus</IconButton>
+			<Link to="/"><IconButton >home</IconButton></Link>
+			<Link to="/setting"><IconButton >gear</IconButton></Link>
+			<Link to="/add"><IconButton >plus</IconButton></Link>
 			
 			{/*use repeater*/}
 			<Button >USER1</Button>
