@@ -18,17 +18,14 @@ const Home = kind({
 			<Column>
 				<Cell size="15%" component="header">
 					<MainPanel />
-					{/*react-router-nested : change right side*/}
 				</Cell>
 				<Cell>
-				<Row> 
-					<Cell >
-						<Map />
-					</Cell>
-					<Cell size="30%">
-						{/*rigth side */}
-					</Cell>
-				</Row>
+					<Row> 
+						<Cell >
+							<Map />
+						</Cell>
+						{/*home : no right side */}
+					</Row>
 				</Cell>
 			</Column>
 			</Panel>
