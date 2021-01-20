@@ -17,9 +17,9 @@ const InputForm = kind({
 		<Panel {...props}>
             <Heading>ADD USER INFO</Heading>
             <Input placeholder="Name" />
-            <Input placeholder="Age" />
+            <Input placeholder="Age" type="number"/>
             <BodyText>Maximum allowable distance</BodyText>
-            <Input placeholder="KM"/>
+            <Input placeholder="KM" type="number"/>
             <Button>SAVE</Button>
 		</Panel>
 	)
