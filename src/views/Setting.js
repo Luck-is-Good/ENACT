@@ -8,6 +8,8 @@ import MainPanel from '../components/MainPanel';
 import {Row, Cell, Column} from '@enact/ui/Layout';
 import {ResolutionDecorator} from '@enact/ui/resolution';
 import Map from '../components/Map';
+import Set from '../components/Set';
+
 
 const Setting = kind({
 	name: 'add',
@@ -21,12 +23,9 @@ const Setting = kind({
 					{/*react-router-nested : change right side*/}
 				</Cell>
 				<Cell>
-				<Row> 
+				<Row style={{height: '100%'}}> 
 					<Cell >
-                        TEST
-						{/*anything*/}
-					</Cell>
-					<Cell size="30%">
+                        <Set/>
 						{/*anything*/}
 					</Cell>
 				</Row>
