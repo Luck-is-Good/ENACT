@@ -18,7 +18,8 @@ const MainPanel = kind({
 			<Link to="/add"><IconButton >plus</IconButton></Link>
 			
 			{/*use repeater*/}
-			<Button >USER1</Button>
+
+			<Link to="/user1"><Button >USER1</Button></Link>
 			
 		</Panel>
 	)
