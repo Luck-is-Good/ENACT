@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import home from '../views/Home';
 import add from '../views/Add';
@@ -12,7 +12,7 @@ import user1 from '../views/User1';
 
 export default function App() {
 	return(
-		<BrowserRouter>
+		<HashRouter>
 			<Switch>
 				<Route exact path = "/" component ={home}/>
 				<Route exact path = "/add" component ={add}/>
@@ -20,6 +20,6 @@ export default function App() {
 				<Route exact path = "/setting" component ={set}/>
 				<Route exact path = "/user1" component ={user1}/>
 			</Switch>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
