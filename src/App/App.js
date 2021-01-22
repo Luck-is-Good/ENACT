@@ -10,6 +10,7 @@ import add_userinfo from '../views/Add_userinfo';
 import set from '../views/Setting';
 import user1 from '../views/User1';
 import connecting from '../views/Connecting';
+import store from '../components/Store';
 
 export default function App() {
 	return(
@@ -21,6 +22,7 @@ export default function App() {
 				<Route exact path = "/setting" component ={set}/>
 				<Route exact path = "/user1" component ={user1}/>
 				<Route exact path = "/connecting" component ={connecting}/>
+				<Route exact path = "/store" component ={store}/>
 			</Switch>
 		</HashRouter>
 	)
