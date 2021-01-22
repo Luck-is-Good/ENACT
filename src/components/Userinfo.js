@@ -14,7 +14,7 @@ const Userinfo = kind({
 		<Panel {...props}>
             <Heading>USER INFO</Heading>
 
-            <BodyText>Name :</BodyText>
+            <BodyText>Name : {loadInfo()}</BodyText>
             <BodyText>Age :</BodyText>
             <BodyText>Real-time Location :</BodyText>
 
@@ -30,5 +30,23 @@ const Userinfo = kind({
 		</Panel>
 	)
 });
+
+function loadInfo() {
+      let userName;
+      
+      firestore
+      .collection('USERS')
+      .doc('test1')
+      .get()
+      .then(doc => {
+            if(doc.data()){
+                  userName = doc.data().user_id;
+            }
+      });
+
+      return userName;
+}
+
+export default Userinfo;
 
 export default Userinfo;
