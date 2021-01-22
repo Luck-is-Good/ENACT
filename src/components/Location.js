@@ -35,7 +35,7 @@ class Location extends React.Component {
 	constructor(props) {
 	  super(props);
   
-	  this.state = {showInputForm: false};
+	  //this.state = {showInputForm: false};
   
 	  this.handleClickNo = this.handleClickNo.bind(this);
 	}
@@ -49,8 +49,10 @@ class Location extends React.Component {
 	render() {
 	  return (
 		<Panel >
-		  <BodyText>Your current location</BodyText>
-		  <Link to="/add/userinfo"><Button>YES</Button></Link>
+			<BodyText>Your current location</BodyText>
+
+			<Link to="/add/userinfo"><Button>YES</Button></Link>
+
 			<Button onClick={this.handleClickNo}>NO</Button>
 		</Panel>
 	  );

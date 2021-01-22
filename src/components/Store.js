@@ -1,4 +1,5 @@
-/* eslint-disable */import React from 'react';
+/* eslint-disable */
+import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Icon from '@enact/moonstone/Icon';
 import { firestore } from "../db/firebase";
