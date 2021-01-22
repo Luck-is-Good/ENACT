@@ -10,12 +10,26 @@ import BodyText from '@enact/moonstone/BodyText';
 import Heading from '@enact/moonstone/Heading';
 import ExpandablePicker from '@enact/moonstone/ExpandablePicker';
 
+class Set extends React.Component {
+    
+	constructor(props) {
+	  super(props);
 
-const Set = kind({
-	name: 'Set',
+      this.handlePickSkinColor = this.handlePickSkinColor.bind(this);
+      this.handlePickTextSize = this.handlePickTextSize.bind(this);
+    }
 
-	render: (props) => (
-		<Panel {...props}>
+    handlePickSkinColor(props) {
+        alert(props.value)
+      }
+
+	handlePickTextSize(props) {
+        alert(props.value)
+	}
+	
+	render() {
+	  return (
+		<Panel>
             <Heading>Setting</Heading>
             <p/>
             
@@ -23,6 +37,7 @@ const Set = kind({
                 joined
                 title="Text Size"
                 width="large"
+                onChange={this.handlePickTextSize}
             >
                 {['Default : normal', 'large']}
             </ExpandablePicker>
@@ -32,11 +47,13 @@ const Set = kind({
                 joined
                 title="Skin Color"
                 width="large"
+                onChange={this.handlePickSkinColor}
             >
                 {['Default : dark', 'light']}
             </ExpandablePicker>
 		</Panel>
-	)
-});
+        )
+    }
+}
 
 export default Set;
