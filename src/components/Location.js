@@ -37,15 +37,9 @@ class Location extends React.Component {
   
 	  this.state = {showInputForm: false};
   
-	  //this.handleClickYes = this.handleClickYes.bind(this);
 	  this.handleClickNo = this.handleClickNo.bind(this);
 	}
 	
-	// handler X -> using router
-	//handleClickYes(event) {
-	  //click yes -> InputForm
-	  //this.setState({showInputForm: true});
-	//}
 
 	handleClickNo(event) {
 	  //click No -> error 

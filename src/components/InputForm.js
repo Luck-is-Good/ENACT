@@ -4,7 +4,6 @@ import kind from '@enact/core/kind';
 import {Panel, Header} from '@enact/moonstone/Panels';
 import React from 'react';
 import IconButton from '@enact/moonstone/IconButton';
-import ExpandableInput from '@enact/moonstone/ExpandableInput';
 import Input from '@enact/moonstone/Input';
 import BodyText from '@enact/moonstone/BodyText';
 import Heading from '@enact/moonstone/Heading';
@@ -20,7 +19,11 @@ const InputForm = kind({
             <Input placeholder="Age" type="number"/>
             <BodyText>Maximum allowable distance</BodyText>
             <Input placeholder="KM" type="number"/>
+            
             <Button>SAVE</Button>
+            {/* Automatic creation of 
+            new user buttons, pages, and routers 
+            on the main panel*/}
 		</Panel>
 	)
 });
@@ -46,7 +49,7 @@ class InputForm extends React.Component {
       });
     }
     
-  
+    //webos : alert X
     handleSubmit(event) {
       alert('User Name:' + this.state.username + ', Age:' + this.state.age + ', Distance:' + this.state.distance);
       event.preventDefault();
