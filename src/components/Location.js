@@ -3,11 +3,7 @@ import Button from '@enact/moonstone/Button';
 import kind from '@enact/core/kind';
 import {Panel, Header} from '@enact/moonstone/Panels';
 import React from 'react';
-import IconButton from '@enact/moonstone/IconButton';
 import BodyText from '@enact/moonstone/BodyText';
-import Popup from '@enact/moonstone/Popup';
-import ContextualPopupDecorator from '@enact/moonstone/ContextualPopupDecorator';
-import InputForm from './InputForm';
 import {Link} from 'react-router-dom';
 
 /*

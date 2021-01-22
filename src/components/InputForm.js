@@ -3,7 +3,6 @@ import Button from '@enact/moonstone/Button';
 import kind from '@enact/core/kind';
 import {Panel, Header} from '@enact/moonstone/Panels';
 import React from 'react';
-import IconButton from '@enact/moonstone/IconButton';
 import Input from '@enact/moonstone/Input';
 import BodyText from '@enact/moonstone/BodyText';
 import Heading from '@enact/moonstone/Heading';
@@ -19,7 +18,7 @@ const InputForm = kind({
             <Input placeholder="Age" type="number"/>
             <BodyText>Maximum allowable distance</BodyText>
             <Input placeholder="KM" type="number"/>
-            
+
             <Button>SAVE</Button>
             {/* Automatic creation of 
             new user buttons, pages, and routers 

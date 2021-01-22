@@ -17,7 +17,7 @@ const Home = kind({
 			<Panel>
 			<Column>
 				<Cell size="15%" component="header">
-					<MainPanel />
+					<MainPanel/>
 				</Cell>
 				<Cell>
 					<Row> 

@@ -8,7 +8,6 @@ import MainPanel from '../components/MainPanel';
 import {Row, Cell, Column} from '@enact/ui/Layout';
 import {ResolutionDecorator} from '@enact/ui/resolution';
 import Map from '../components/Map';
-import Location from '../components/Location';
 import Userinfo from '../components/Userinfo';
 
 const Add = kind({
@@ -16,7 +15,7 @@ const Add = kind({
 
 	render: (props) => (
 		<div {...props}>
-			<Panel>
+			<Panel >
 			<Column>
 				<Cell size="15%" component="header">
 					<MainPanel />

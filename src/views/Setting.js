@@ -7,7 +7,6 @@ import React from 'react';
 import MainPanel from '../components/MainPanel';
 import {Row, Cell, Column} from '@enact/ui/Layout';
 import {ResolutionDecorator} from '@enact/ui/resolution';
-import Map from '../components/Map';
 import Set from '../components/Set';
 
 
@@ -25,7 +24,7 @@ const Setting = kind({
 				<Cell>
 				<Row style={{height: '100%'}}> 
 					<Cell >
-                        <Set/>
+                        <Set />
 						{/*anything*/}
 					</Cell>
 				</Row>
