@@ -38,6 +38,7 @@
 		"@react-google-maps/api": "^2.1.0",
 		"firebase": "^8.2.3",
 		"ilib": "^14.4.0",
+		"laravel-vue-pagination": "^2.1.0",
 		"prop-types": "^15.6.2",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
