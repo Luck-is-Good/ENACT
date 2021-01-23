@@ -5,6 +5,7 @@ import {Panel, Header} from '@enact/moonstone/Panels';
 import React from 'react';
 import BodyText from '@enact/moonstone/BodyText';
 import Heading from '@enact/moonstone/Heading';
+import {firestore} from '../db/firebase';
 
 
 const Userinfo = kind({
@@ -41,12 +42,11 @@ function loadInfo() {
       .then(doc => {
             if(doc.data()){
                   userName = doc.data().user_id;
+                  console.log("user_id: ", userName);
             }
       });
 
       return userName;
 }
-
-export default Userinfo;
 
 export default Userinfo;
