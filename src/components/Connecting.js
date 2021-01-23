@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 import Notification from '@enact/moonstone/Notification';
 import Dialog from '@enact/moonstone/Dialog';
 import CreateCode from '../components/CreateCode';
-import Store from "./Store";
+import Store from "../components/Store";
 
 var user_id = Math.random().toString(36).slice(7);
 
@@ -19,33 +19,49 @@ class Connecting extends React.Component{
 
 	constructor(props) {
 		super(props);
-		this.state={name: ''};
-        this.handleChange = this.handleChange.bind(this);
+		this.state={value: ''};
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
     
 	handleChange(event) {
-        this.setState({name: event.target.value});
-        //template.name = this.state.value;
+        this.setState({value: event.target.value});
+		//template.name = this.state.value;
+	}
+	
+	handleSubmit(event) {
+		alert('A name was submitted: ' + this.state.value);
+		event.preventDefault();
 	}
 
 	render() {
+		
 		return (
 		<div>
-			<form>
-			<input placeholder="Name" 
+			<form onSubmit={this.handleSubmit}>
+			<input type="text" placeholder="Name"
 			onChange={this.handleChange}></input> 
-			<BodyText >code: {this.state.name}</BodyText>
-            </form>
-            <BodyText>{user_id}</BodyText>
-			<Store name={this.state.name}/>
-        <Spinner>Connecting</Spinner>
-		<p/>
-		{/* When the web and app are connected, 
-		a pop-up appears to confirm the location.*/}
-		<Link to="/Store">
-			<Button>complete</Button>
+			<input type="submit" value="submit"/>
+
+			<BodyText>user_id: {user_id}</BodyText>
+			<BodyText >input: {this.state.value}</BodyText>
 			
-		</Link>
+            </form>
+
+        	<Spinner>Connecting</Spinner>
+
+			<p/>
+			{/* When the web and app are connected, 
+			a pop-up appears to confirm the location.*/}
+			<Link to={{
+				pathname : '/store',
+				state : {
+					userid: user_id,
+					inputvalue : this.state.value
+				}
+			}}>
+			<Button>complete</Button>
+			</Link>
 		</div>
 		);
 	}
