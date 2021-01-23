@@ -10,17 +10,18 @@ function Store(props) {
     //var template = require('./CreateCode.js');
     //console.log("name " + template.foo.name);
     
-    firestore.collection("USERS").doc("name").set({
+    var user_id = props.user_id;
+    firestore.collection("USERS").doc("test1").set({
       //create_date: new Date(),
-      //user_id: user_id,
+      user_id: user_id,
     })
     .then(function(docRef){
-      console.log("Document written with ID: ", props.name);
+      console.log("Document written with ID: " + props.user_id);
     });
 
     return(
-        <BodyText>{props.name}</BodyText>
-        
+        <BodyText>{props.user_id}</BodyText>
+
     )
 }
 

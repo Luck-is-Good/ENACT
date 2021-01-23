@@ -19,8 +19,8 @@ class Connecting extends React.Component{
 
 	constructor(props) {
 		super(props);
-		this.state={name: ''};
-        this.handleChange = this.handleChange.bind(this);
+		this.state={props: ''};
+		this.handleChange = this.handleChange.bind(this);
 	}
     
 	handleChange(event) {
@@ -37,7 +37,7 @@ class Connecting extends React.Component{
 			<BodyText >code: {this.state.name}</BodyText>
             </form>
             <BodyText>{user_id}</BodyText>
-			<Store name={this.state.name}/>
+			<Store user_id = {user_id}/>
         <Spinner>Connecting</Spinner>
 		<p/>
 		{/* When the web and app are connected, 
